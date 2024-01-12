@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<style>
+
+    body{
+        background-image:url(indir.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        
+    }
+    div{
+        column-count:3;
+        column-rule: 3px solid lightblue;
+    }
+</style>
+</head>
+<body>
+    <div>‘Yapay Zeka’ kavramı ilk duyuşta ister akademisyen, öğretmen, öğrenci olsun ister
+        işadamı olsun birçok kişi üzerinde merak uyandırmaktadır. Neden olduğu sorulacak olursa,
+        zeka gibi soyut bir kavramın yapay ile nitelendirilmesi olarak cevap verebiliriz. Kavramın
+        uyandırdığı merakla birlikte, içeriği yada temsil ettiği konular hakkında birçok kişinin ciddi
+        bir malumatı yoktur.
+        Yapay zekanın çevresinde konuşulan konu başlıkları, bileşenler ise yapay sinir ağları,
+        uzman sistemler, bulanık mantık, genetik algoritmalardır.
+        Yapay zekayı sahiplenen birçok disiplin vardır. Bazıları, bilgisayar mühendisliği,
+        felsefe, bilişsel bilim, elektronik bilimleridir.
+        Yapay zeka konusunda pek fazla türkçe kaynağa rastlanamamaktadır. Bu küçük
+        hacimdeki çalışma bu konuda hiçbir bilgiye sahip olmayana öz bilgiler verme noktasında,
+        bilgi sahiplerinin kafalarındaki karışıklıkları düzeltme noktasında yardımcı olabilirse,
+        amacına ulaşmış olacaktır.
+        Bu araştırmanın akışı ‘yapay zekanın’ tanımlanması, ortak bir anlayışın elde
+        edilmesinden sonra kronolojik olarak bugünlere gelişi, yapay zeka teknikleri, uygulama
+        alanları, geleceği ve nihayetinde toplu bir değerlendirme şeklinde olacaktır.
+        
+        * Endüstri Mühendisliği Bölümü, Mühendislik Mimarlık Fakültesi, Yaşar Üniversitesi, harun.pirim@yasar.edu.tr
+        TEKNOLOJİ BAĞIMLI YAŞAMIN MATEMATİKSEL DESENLERİ-I
+        
+        Pirim, 2006
+        82
+        2. ZEKA VE YAPAY ZEKA
+        “Tarihte üç büyük olay vardır. Bunlardan ilki kainatın oluşumudur. İkincisi yaşamın
+        başlangıcının olmasıdır. Üçüncüsü de yapay zekanın ortaya çıkışıdır.”
+        BBC ile söyleşisinde MIT Bilgisayar Bilimleri laboratuvar yöneticilerinden Edward
+        Fredkin yukarıdaki ifadeleri kullanmıştır.
+        Yapay zeka gibi bir konuyu anlayabilmek için beyin ile bilgisayar arasındaki farklar ve
+        benzerlikler anlaşılmalıdır:
+        Beyin yaklaşık bir buçuk kilo ağırlığındadır. Bu ceviz görüntüsündeki organ, 60 yıllık
+        bir ömürde saniyede 600 birimlik hafızada kaydedip, işleyip programlamak kapasitesine
+        sahiptir. Bu, dakikada 3,600, saatte 2,160,000 günde 51,840,000 bitlik bilgi demektir.
+        Beyin üzerine araştırmalar yapan Dr. V. Grey Walter’in incelemelerine bakılırsa, insan
+        beynine benzeyen bir makinanın yapılabilmesi için 300 trilyon dolardan fazla para
+        gerekmektedir. Böyle bir makinenin çalışabilmesi için ise 1 trilyon wattlık elektrik enerjisine
+        ihtiyaç vardır.
+        Scott Witt adlı yazarın tesbiti “yaşamımız boyunca beyin, gözlerininzle, kulaklarınızla
+        burnunuzla, parmaklarınızla ve diğer duyu organlarınızla, devamlı olarak elektrik sinyalleri
+        şeklinde, bilgi alır, depolar, gönderir. Beyninizden geçen milyarlarca gerçek ve hayal, doksan
+        milyon kalın kitabı doldururdu.”1 şeklindedir.
+        Bu arada zekanın ne anlama geldiği ve ne kadarının ölçülebildiği konusunda görüş
+        birliği sağlanamamıştır. Yapılan tanımlamaların ortak bir cümlesi olarak, zekayı beynin
+        bilgiyi alıp, hızlı ve doğru analiz etmesi olarak tarif edebiliriz.
+        Şuur, bilinçaltı, ruh gibi açık uçlu ve soyut bir kelime olması itibariyle zekanın
+        evrensel bir tarifi yapılamamıştır. 
+        NOT: Akla gelebilecek bir soru IQ, zeka ilgisidir. IQ zeka değildir. Son derece kompleks bir
+fenomen olan zekanın sadece bir boyutudur.
+Akıllıca hareket eden makinelere robotlara aletlere vs. ulaşma hedefi araştırmacılar
+tarafından daha çok benimsenmektedir.
+“İnsanlarda canlılığı taklit eden makineler, süs eşyaları ve oyuncaklar yapmak
+derinden gelen bir arzudur.” ki yapay zeka üzerine yapılan çalışmalar giderek
+yoğunlaşmaktadır.Hatta “canlılığı temsil eden varlıklar teknolojinin gelişmesini doğrudan
+etkilemiştir.” Tezinin rahatlıkla ortaya atabiliriz. Örneğin helikopter böceği olmasaydı ve
+insanoğlu onu taklit etmeseydi, şu anda “Apachi” kelimesi sadece eski bir kızıldereli kabilesi
+ismini çağrıştırmaktan ibaret kalabilecekti. Ya da örümcek ağlarının var olmadığı bir dünyada
+çelik yelek yada buna benzer değerleri tam olarak anlayamayacaktık(Amerika’da çelik yelek
+üretici firmalar, çelik yelek yapımında hammadde olarak örümcek ağı kullanmaktadır.)
+TEKNOLOJİ BAĞIMLI YAŞAMIN MATEMATİKSEL DESENLERİ-I
+
+Pirim, 2006
+86
+Yapay zeka tekniklerine geçmeden önce akıllı bir sistemin karar vermeden önce
+öğrenmeye olan gereksinimini ortaya atmakta fayda olacaktır. Bu anlamda yapay sinir ağları
+ve endüktif-dedüktif öğrenme gibi birçok öğrenme tekniği vardır.
+İnsanda öğrenme üzerine atılan tezlerden biri şudur ki, insan dış dünyayı sayısal
+verilerle değil, sembollerle algılar.
+“Isbagylrairarian ikre dlıkaulnoua üeiznhpş im rav?” cümlesini okuyup belli bir süre
+sonra boş bir kağıda hafızanızdan yazmayı denediğinizde nasıl bir tablo ile karşılaşırsınız?
+Peki “Bilgisayarların zeki olduklarından şüpheniz var mı?” cümlesi için aynı deneyi
+tekrarlarsak sonuç nasıl olur?
+Bu testten anlaşılan odur ki insan anlamlı semboller ile algılar, öğrenir. İlk cümlede
+anlam oluşmadığı için herbir harfi bir sembol olarak düşünmektedir. Neticede harfler
+adedince sembolü hatırlamak çok zor olacaktır. İkinci cümlede 6 sembol var denilebilir. İnsan
+böyle bir cümleyi kolaylıkla geri yazabilmektedir. İnsan 4-7 arasındaki sembolleri hafızada
+tutabiliyor.
+Buraya kadar oluşturmaya çalıştığımız çerçeveden hareketle, insan uzmanlığı ile yapay
+uzmanlığı şöyle kıyaslayabiliriz:
+Yapay Zeka’ kavramı ilk duyuşta ister akademisyen, öğretmen, öğrenci olsun ister
+        işadamı olsun birçok kişi üzerinde merak uyandırmaktadır. Neden olduğu sorulacak olursa,
+        zeka gibi soyut bir kavramın yapay ile nitelendirilmesi olarak cevap verebiliriz. Kavramın
+        uyandırdığı merakla birlikte, içeriği yada temsil ettiği konular hakkında birçok kişinin ciddi
+        bir malumatı yoktur.
+        Yapay zekanın çevresinde konuşulan konu başlıkları, bileşenler ise yapay sinir ağları,
+        uzman sistemler, bulanık mantık, genetik algoritmalardır.
+        Yapay zekayı sahiplenen birçok disiplin vardır. Bazıları, bilgisayar mühendisliği,
+        felsefe, bilişsel bilim, elektronik bilimleridir.
+        Yapay zeka konusunda pek fazla türkçe kaynağa rastlanamamaktadır. Bu küçük
+        hacimdeki çalışma bu konuda hiçbir bilgiye sahip olmayana öz bilgiler verme noktasında,
+        bilgi sahiplerinin kafalarındaki karışıklıkları düzeltme noktasında yardımcı olabilirse,
+        amacına ulaşmış olacaktır.
+        Bu araştırmanın akışı ‘yapay zekanın’ tanımlanması, ortak bir anlayışın elde
+        edilmesinden sonra kronolojik olarak bugünlere gelişi, yapay zeka teknikleri, uygulama
+        alanları, geleceği ve nihayetinde toplu bir değerlendirme şeklinde olacaktır.
+        
+        * Endüstri Mühendisliği Bölümü, Mühendislik Mimarlık Fakültesi, Yaşar Üniversitesi, harun.pirim@yasar.edu.tr
+        TEKNOLOJİ BAĞIMLI YAŞAMIN MATEMATİKSEL DESENLERİ-I
+        
+        Pirim, 2006
+        82
+        2. ZEKA VE YAPAY ZEKA
+        “Tarihte üç büyük olay vardır. Bunlardan ilki kainatın oluşumudur. İkincisi yaşamın
+        başlangıcının olmasıdır. Üçüncüsü de yapay zekanın ortaya çıkışıdır.”
+        BBC ile söyleşisinde MIT Bilgisayar Bilimleri laboratuvar yöneticilerinden Edward
+        Fredkin yukarıdaki ifadeleri kullanmıştır.
+        Yapay zeka gibi bir konuyu anlayabilmek için beyin ile bilgisayar arasındaki farklar ve
+        benzerlikler anlaşılmalıdır:
+        Beyin yaklaşık bir buçuk kilo ağırlığındadır. Bu ceviz görüntüsündeki organ, 60 yıllık
+        bir ömürde saniyede 600 birimlik hafızada kaydedip, işleyip programlamak kapasitesine
+        sahiptir. Bu, dakikada 3,600, saatte 2,160,000 günde 51,840,000 bitlik bilgi demektir.
+        Beyin üzerine araştırmalar yapan Dr. V. Grey Walter’in incelemelerine bakılırsa, insan
+        beynine benzeyen bir makinanın yapılabilmesi için 300 trilyon dolardan fazla para
+        gerekmektedir. Böyle bir makinenin çalışabilmesi için ise 1 trilyon wattlık elektrik enerjisine
+        ihtiyaç vardır.
+        Scott Witt adlı yazarın tesbiti “yaşamımız boyunca beyin, gözlerininzle, kulaklarınızla
+        burnunuzla, parmaklarınızla ve diğer duyu organlarınızla, devamlı olarak elektrik sinyalleri
+        şeklinde, bilgi alır, depolar, gönderir. Beyninizden geçen milyarlarca gerçek ve hayal, doksan
+        milyon kalın kitabı doldururdu.”1 şeklindedir.
+        Bu arada zekanın ne anlama geldiği ve ne kadarının ölçülebildiği konusunda görüş
+        birliği sağlanamamıştır. Yapılan tanımlamaların ortak bir cümlesi olarak, zekayı beynin
+        bilgiyi alıp, hızlı ve doğru analiz etmesi olarak tarif edebiliriz.
+        Şuur, bilinçaltı, ruh gibi açık uçlu ve soyut bir kelime olması itibariyle zekanın
+        evrensel bir tarifi yapılamamıştır. 
+        NOT: Akla gelebilecek bir soru IQ, zeka ilgisidir. IQ zeka değildir. Son derece kompleks bir
+fenomen olan zekanın sadece bir boyutudur.
+Akıllıca hareket eden makinelere robotlara aletlere vs. ulaşma hedefi araştırmacılar
+tarafından daha çok benimsenmektedir.
+“İnsanlarda canlılığı taklit eden makineler, süs eşyaları ve oyuncaklar yapmak
+derinden gelen bir arzudur.” ki yapay zeka üzerine yapılan çalışmalar giderek
+yoğunlaşmaktadır.Hatta “canlılığı temsil eden varlıklar teknolojinin gelişmesini doğrudan
+etkilemiştir.” Tezinin rahatlıkla ortaya atabiliriz. Örneğin helikopter böceği olmasaydı ve
+insanoğlu onu taklit etmeseydi, şu anda “Apachi” kelimesi sadece eski bir kızıldereli kabilesi
+ismini çağrıştırmaktan ibaret kalabilecekti. Ya da örümcek ağlarının var olmadığı bir dünyada
+çelik yelek yada buna benzer değerleri tam olarak anlayamayacaktık(Amerika’da çelik yelek
+üretici firmalar, çelik yelek yapımında hammadde olarak örümcek ağı kullanmaktadır.)
+TEKNOLOJİ BAĞIMLI YAŞAMIN MATEMATİKSEL DESENLERİ-I
+
+Pirim, 2006
+86
+Yapay zeka tekniklerine geçmeden önce akıllı bir sistemin karar vermeden önce
+öğrenmeye olan gereksinimini ortaya atmakta fayda olacaktır. Bu anlamda yapay sinir ağları
+ve endüktif-dedüktif öğrenme gibi birçok öğrenme tekniği vardır.
+İnsanda öğrenme üzerine atılan tezlerden biri şudur ki, insan dış dünyayı sayısal
+verilerle değil, sembollerle algılar.
+“Isbagylrairarian ikre dlıkaulnoua üeiznhpş im rav?” cümlesini okuyup belli bir süre
+sonra boş bir kağıda hafızanızdan yazmayı denediğinizde nasıl bir tablo ile karşılaşırsınız?
+Peki “Bilgisayarların zeki olduklarından şüpheniz var mı?” cümlesi için aynı deneyi
+tekrarlarsak sonuç nasıl olur?
+Bu testten anlaşılan odur ki insan anlamlı semboller ile algılar, öğrenir. İlk cümlede
+anlam oluşmadığı için herbir harfi bir sembol olarak düşünmektedir. Neticede harfler
+adedince sembolü hatırlamak çok zor olacaktır. İkinci cümlede 6 sembol var denilebilir. İnsan
+böyle bir cümleyi kolaylıkla geri yazabilmektedir. İnsan 4-7 arasındaki sembolleri hafızada
+tutabiliyor.
+Buraya kadar oluşturmaya çalıştığımız çerçeveden hareketle, insan uzmanlığı ile yapay
+uzmanlığı şöyle kıyaslayabiliriz:
+    </div>
+</body>
+</html>

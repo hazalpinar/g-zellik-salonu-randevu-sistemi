@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuaför Salonu</title>
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: hsl(0, 4%, 31%);
+      color: #333;
+      
+    }
+
+    header {
+      background-color: hsl(327, 87%, 34%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .employees {
+      list-style: none;
+      padding: 0;
+    }
+
+    .employee {
+      margin: 10px;
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .employee-info {
+      display: none;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .appointment-form {
+      margin-top: 20px;
+    }
+
+    .appointment-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .appointment-form input, .appointment-form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .appointment-form button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ELEGANCE GÜZELLİK SALONU</h1>
+  </header>
+
+  <section>
+    <h2>Çalışanlar</h2>
+    <ul class="employees">
+      <li class="employee" onclick="showEmployeeInfo('tolga')">Tolga Sarıkaya</li>
+      <li class="employee" onclick="showEmployeeInfo('irem')">İrem Emir</li>
+      <!-- Diğer çalışanları ekleyebilirsiniz -->
+    </ul>
+
+    <div id="tolga-info" class="employee-info">
+      <h2>Tolga Sarıkaya</h2>
+      <p>İlgilendiği İşlemler:</p>
+      <ul>
+        <li>Saç Kesimi</li>
+        <li>Saç Boyama</li>
+        <!-- Diğer işlemleri ekleyebilirsiniz -->
+      </ul>
+    </div>
+
+    <div id="irem-info" class="employee-info">
+      <h2>İrem Emir</h2>
+      <p>İlgilendiği İşlemler:</p>
+      <ul>
+        <li>Saç Tasarımı</li>
+        <li>Saç Bakımı</li>
+        <!-- Diğer işlemleri ekleyebilirsiniz -->
+      </ul>
+    </div>
+
+    <div class="contact-info">
+      <h2>İletişim Bilgileri</h2>
+      <p onclick="goToPage('phone')">Telefon: +90 555 123 45 67</p>
+      <p onclick="goToPage('email')">E-posta: info@kuaforsalonu.com</p>
+      <p onclick="goToPage('address')">Adres: Örnek Mahallesi, Örnek Sokak No: 123, 34567 Şehir/Ülke</p>
+    </div>
+
+    <div class="appointment-form">
+      <h2>Randevu Al</h2>
+      <form id="appointment-form" onsubmit="submitForm(event)">
+        <label for="customerName">Ad Soyad:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="customerEmail">E-posta:</label>
+        <input type="email" id="customerEmail" name="customerEmail" required>
+
+        <label for="appointmentDate">Randevu Tarihi:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="appointmentTime">Randevu Saati:</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+        <label for="selectedService">Hizmet Seçimi:</label>
+        <select id="selectedService" name="selectedService" required>
+          <option value="sacKesimi">Saç Kesimi</option>
+          <option value="sacBoyama">Saç Boyama</option>
+          <!-- Diğer hizmetleri ekleyebilirsiniz -->
+        </select>
+
+        <button type="submit">Randevu Al</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function showEmployeeInfo(employee) {
+      const employeeInfo = document.getElementById(employee + '-info');
+      if (employeeInfo) {
+        const allEmployeeInfo = document.querySelectorAll('.employee-info');
+        allEmployeeInfo.forEach(info => info.style.display = 'none');
+        employeeInfo.style.display = 'block';
+      }
+    }
+
+    function goToPage(page) {
+      alert('Sayfa bulunamadı: ' + page); // Burada ilgili sayfaya yönlendirme işlemini gerçekleştirebilirsiniz.
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Randevunuz alınmıştır!');
+    }
+  </script>
+</body>
+</html>

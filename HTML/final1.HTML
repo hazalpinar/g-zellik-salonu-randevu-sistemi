@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var cumle ="Merhaba yazılım";
+    let X;
+    x=3+5;
+    document.write(x);
+    document.write(cumle);
+    
+  </script>  
+  <p>
+    hazal ve arkadaşları yarın konferans salonunda sunum yapacak
+  </p>
+    <button onclick="document.write('yeni metin')">Tıklayınız</button>
+
+    <script>
+        let simdi=new Date();
+        //alert(simdi.getMonth());
+        let dTarihi=new Date(1948,5,18);
+        alert(dTarihi);
+    </script>
+    <script>
+        let dizi=[3,5,7,10];
+        for(let i=0; i<dizi.lenght;i++)
+        {
+            document.write(dizi[i]+ "<br>");
+        }
+        for(let i in dizi)
+        {
+            document.write(dizi[i]+"<br>");
+        }
+    </script>
+    <br>
+    <br>
+    <script>
+
+        function topla(x)
+        {
+            let y;
+            y=x+5;
+            document.write(y);
+        }
+
+        topla(3);
+
+    </script>
+
+    <br>
+    <script>
+        const topla1=(x)=>  //const yerine let de kullanılır
+        {
+            document.write(x+5);
+        }
+        topla1(7);
+
+    </script>
+    <br>
+    <script>
+        let sayilar1=[2,4,5,7,13,18];
+        let tekSayilar=[];
+        for(let i of sayilar1)
+        {
+            if(i%2==1)
+            {
+                tekSayilar.push(i);
+            }
+        }
+        for(let ts of tekSayilar)
+        {
+            document.write(ts+"<br>");
+        }
+    </script>
+   
+
+
+</body>
+</html>
