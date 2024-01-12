@@ -1,2 +1,311 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Güzellik Salonu</title>
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: hsl(0, 4%, 31%);
+      color: hsl(325, 78%, 27%);
+      background-image: url("kuaf.jpeg");
+      
+    }
+
+    header {
+      background-color: hsl(327, 87%, 34%);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: 'algerian';
+      
+    }
+
+
+    section {
+      max-width: 850px;
+      margin: 20px auto;
+      padding:20px;
+      background-color: #c5bfc2;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .employees {
+      list-style: none;
+      padding: 0;
+    }
+
+    .employee {
+      margin: 10px;
+      padding: 10px;
+      background-color: #b6a6b2;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .employee-info {
+      display: none;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .appointment-form {
+      margin-top: 20px;
+    }
+
+    .appointment-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .appointment-form input, .appointment-form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    
+
+    .appointment-form button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: hsl(327, 87%, 34%);
+      color: #fff;
+      
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    img {
+      width: 400px;
+      height: 200px;
+      border-radius: 0%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ELEGANS GÜZELLİK SALONU</h1>
+  </header>
+
+  <section>
+    <h2>Çalışanlar:</h2>
+    <ul class="employees">
+      <li class="employee" onclick="showEmployeeInfo('tolga')">Tolga Sarıkaya ✂</li>
+      <li class="employee" onclick="showEmployeeInfo('irem')">İrem Emir ✂</li>
+      <li class="employee" onclick="showEmployeeInfo('tuğba')">Tuğba Dursun ✂</li>
+      <li class="employee" onclick="showEmployeeInfo('sude')">Sude Demir ✂</li>
+      <li class="employee" onclick="showEmployeeInfo('deniz')">Deniz Işık ✂</li>
+      <li class="employee" onclick="showEmployeeInfo('hasan')">Hasan Yılmaz ✂</li>
+    </ul>
+
+    <div id="tolga-info" class="employee-info">
+      <h2>Tolga Sarıkaya</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Ombre (1000₺ - 3500₺)</li>
+        <li>Sombre (1000₺ - 3500₺)</li>
+        <li>Röfle (1000₺ - 3000₺)</li>
+        <li>Balyaj (1000₺ - 2500₺)</li>
+        <li>Saç Kaynak (10 adet 1000₺)</li>
+        
+      </ul>
+    </div>
+
+    <div id="irem-info" class="employee-info">
+      <h2>İrem Emir</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Saç Kesimi (250₺)</li>
+        <li>Dip Boya(300₺)</li>
+        <li>Komple Boya (600₺)</li>
+        <li>Fön (150₺)</li>
+        <li>Maşa (150₺)</li>
+        <li>Kaş-Bıyık (100₺)</li>
+        <li>Yüz Alma (80₺)</li>
+        </ul>
+    </div>
+    <div id="tuğba-info" class="employee-info">
+      <h2>Tuğba Dursun</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Lazer-Epilasyon(8 seans 9000₺)</li>
+        <li>Cilt Bakımı (üç seans 2000₺)</li>
+        
+      </ul>
+    </div>
+    
+    <div id="sude-info" class="employee-info">
+      <h2>Sude Demir</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Makyaj (300₺ - 500₺)</li>
+        <li>Porselen Makyaj (850₺)</li>
+        <li>Günlük Makyaj (200₺)</li>
+        
+      </ul>
+    </div>
+
+    <div id="deniz-info" class="employee-info">
+      <h2>Deniz Işık</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Manikür (200₺)</li>
+        <li>Pedikür (250₺)</li>
+        <li>Protez Tırnak (650₺)</li>
+        <li>Jel Tırnak (500₺)</li>
+        <li>Tırnak Tasarım (300₺)</li>
+        <li>Kalıcı Oje (1000₺)</li>
+      </ul>
+    </div>
+
+    <div id="hasan-info" class="employee-info">
+      <h2>Hasan Yılmaz</h2>
+      <p><b>İlgilendiği İşlemler ve Fiyatları:</b></p>
+      <ul>
+        <li>Keratin Bakım (800₺)</li>
+        <li>Brezilya Fönü (2500₺ - 5000₺)</li>
+        <li>Perma (1500₺ - 3000₺)</li>
+        <li>Saç Bakımı (500₺)</li>
+        
+      </ul>
+    </div>
+    <hr>
+
+    <div class="appointment-form" >
+      
+      <h2>Randevu Al</h2>
+      <form id="appointment-form" onsubmit="submitForm(event)">
+        <label for="customerName">Ad Soyad:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="customerEmail">E-posta:</label>
+        <input type="email" id="customerEmail" name="customerEmail" required>
+
+        <label for="appointmentDate">Randevu Tarihi:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="appointmentTime">Randevu Saati:</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+        <label for="selectedService">Hizmet Seçimi:</label>
+        <select id="selectedService" name="selectedService" required>
+          <option value="ombre">Ombre</option>
+          <option value="sombre">Sombre</option>
+          <option value="röfle">Röfle</option>
+          <option value="balyaj">Balyaj</option>
+          <option value="sacKaynak">Saç Kaynak</option>
+          <option value="dipBoya">Dip Boya</option>
+          <option value="kompleBoya">Komple Boya</option>
+          <option value="fön">Fön</option>
+          <option value="masa">Maşa</option>
+          <option value="kasBıyık">Kaş-Bıyık</option>
+          <option value="makyaj">Makyaj</option>
+          <option value="porselenMakyaj">Porselen Makyaj</option>
+          <option value="günlükMakyaj">Günlük Makyaj</option>
+          <option value="manikür">Manikür</option>
+          <option value="pedikür">Pedikür</option>
+          <option value="protezTırnak">Protez Tırnak</option>
+          <option value="jelTırnak">Jel Tırnak</option>
+          <option value="tırnakTasarımı">Tırnak Tasarımı</option>
+          <option value="kalıcıOje">Kalıcı Oje</option>
+          <option value="keratinBakım">Keratin Bakım</option>
+          <option value="brezilyaFönü">Brezilya Fönü</option>
+          <option value="perma">Perma</option>
+          <option value="sacBakımı">Saç Bakımı</option>
+          
+        </select>
+         
+        <button type="submit">Randevu Al</button>
+      </form>
+    </div>
+
+    <p>Değerli müşterilerimiz <b><u>salı</u></b> günleri kapalıyız, diğer günler hizmetinizdeyiz.</p>
+    <hr>
+    <br>
+    <br>
+    <h3>Elegans Güzellik Salonu Tanıtım Videosu :</h3>
+
+    <body>
+  
+      <iframe width="400" height="200" src="https://www.youtube.com/embed/Y_DDRpsOtVU?si=WzU7pKg5ndBXV7-W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <hr>
+       <br>
+       <br>
+       <h3>Salonumuzda populer olan işlemlerimiz;</h3>
+       <br>
+       <img src="1.jpg">
+       <img src="2.jpg">
+       <img src="3.jpg">
+       <img src="4.jpg">
+       <img src="5.jpg">
+       <img src="6.jpg">
+       <img src="7.jpg">
+       <img src="8.jpg">
+       
+       
+      </body>
+      
+
+      <hr>
+    <div class="contact-info">
+      <h2>İletişim Bilgileri</h2>
+      <p onclick="goToPage('phone')">Telefon: +90 533 405 57 10</p>
+      <p onclick="goToPage('email')">E-posta: elegansbeauty@gmail.com</p>
+      <p onclick="goToPage('address')">Adres: Pınar Mahallesi, Salkım Sokak No:134, 34912 İstanbul/Kurtköy</p>
+    </div>
+
+
+  </section>
+
+  <script>
+    function showEmployeeInfo(employee) {
+      const employeeInfo = document.getElementById(employee + '-info');
+      if (employeeInfo) {
+        const allEmployeeInfo = document.querySelectorAll('.employee-info');
+        allEmployeeInfo.forEach(info => info.style.display = 'none');
+        employeeInfo.style.display = 'block';
+      }
+    }
+
+    function goToPage(page) {
+      alert('Sayfa bulunamadı: ' + page); 
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Randevunuz alınmıştır!');
+    }
+  </script>
+</body>
+</html>
